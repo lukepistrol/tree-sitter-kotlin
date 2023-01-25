@@ -12,6 +12,14 @@ let package = Package(
     targets: [
         .target(name: "TreeSitterKotlin",
                 path: ".",
+                exclude: [
+                    "binding.gyp",
+                    "bindings",
+                    "grammar.js",
+                    "LICENSE",
+                    "package.json",
+                    "README.md",
+                ],
                 sources: [
                     "src/parser.c",
                     "src/scanner.c",
